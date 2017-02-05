@@ -1,9 +1,9 @@
 FROM armhf/alpine:3.5
 
 COPY requirements_all.txt requirements_all.txt
-COPY files/bin/. /usr/local/bin/
+COPY files/bin/homeassistant-install.sh ./homeassistant-install.sh
 
-RUN ["homeassistant-install"]
+RUN ["chmod +x ./homeassistant-install.sh", "homeassistant-install.sh"]
 
 
 VOLUME /data
