@@ -1,4 +1,4 @@
-FROM container4armhf/armhf-alpine:3.5
+FROM armhf/alpine:3.5
 
 COPY requirements_all.txt requirements_all.txt
 
