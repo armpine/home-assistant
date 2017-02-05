@@ -2,10 +2,10 @@
 
 set -e
 
-    echo "http://dl-2.alpinelinux.org/alpine/v__OS_VERSION__/community" >> /etc/apk/repositories;
-    echo "http://dl-3.alpinelinux.org/alpine/v__OS_VERSION__/community" >> /etc/apk/repositories;
-    echo "http://dl-4.alpinelinux.org/alpine/v__OS_VERSION__/community" >> /etc/apk/repositories;
-    echo "http://dl-5.alpinelinux.org/alpine/v__OS_VERSION__/community" >> /etc/apk/repositories;
+    echo "http://dl-2.alpinelinux.org/alpine/v3.5/community" >> /etc/apk/repositories;
+    echo "http://dl-3.alpinelinux.org/alpine/v3.5/community" >> /etc/apk/repositories;
+    echo "http://dl-4.alpinelinux.org/alpine/v3.5/community" >> /etc/apk/repositories;
+    echo "http://dl-5.alpinelinux.org/alpine/v3.5/community" >> /etc/apk/repositories;
 
 
     #####
@@ -50,9 +50,9 @@ set -e
 
 
     #####
-    # Installing Home Assistant __HA_VERSION__
+    # Installing Home Assistant 0.37.1
     #####
-    pip3 install homeassistant==__HA_VERSION__;
+    pip3 install homeassistant==0.37.1;
 
 
     #####
