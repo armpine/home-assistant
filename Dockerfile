@@ -2,8 +2,6 @@ FROM armhf/alpine:3.5
 
 COPY requirements_all.txt requirements_all.txt
 
-RUN [ "cross-build-start" ]
-
 RUN echo "http://dl-2.alpinelinux.org/alpine/v3.5/community" >> /etc/apk/repositories; \
     echo "http://dl-3.alpinelinux.org/alpine/v3.5/community" >> /etc/apk/repositories; \
     echo "http://dl-4.alpinelinux.org/alpine/v3.5/community" >> /etc/apk/repositories; \
@@ -65,8 +63,6 @@ RUN python3 -m ensurepip; \
     rm -r /root/.cache; \
     rm -rf /var/cache/apk/* \
     ;
-
-RUN [ "cross-build-end" ]
 
 VOLUME /data
 WORKDIR /data
