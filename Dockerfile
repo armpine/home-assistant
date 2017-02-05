@@ -2,7 +2,7 @@ FROM armhf/alpine:3.5
 
 ENV HOME_ASSISTANT_VERSION 0.37.1
 
-COPY tmp/qemu-arm-static /usr/bin/qemu-arm-static
+#COPY tmp/qemu-arm-static /usr/bin/qemu-arm-static
 COPY requirements_all.txt requirements_all.txt
 
 RUN echo "http://dl-2.alpinelinux.org/alpine/v3.5/community" >> /etc/apk/repositories; \
