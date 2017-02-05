@@ -3,7 +3,7 @@ FROM armhf/alpine:3.5
 COPY requirements_all.txt requirements_all.txt
 COPY files/bin/. /usr/local/bin/
 
-RUN ["docker-build-start"]
+RUN ["homeassistant-install"]
 
 
 VOLUME /data
