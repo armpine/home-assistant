@@ -7,13 +7,13 @@ RUN [ "cross-build-start" ]
 RUN echo "http://dl-2.alpinelinux.org/alpine/v3.5/community" >> /etc/apk/repositories; \
     echo "http://dl-3.alpinelinux.org/alpine/v3.5/community" >> /etc/apk/repositories; \
     echo "http://dl-4.alpinelinux.org/alpine/v3.5/community" >> /etc/apk/repositories; \
-    echo "http://dl-5.alpinelinux.org/alpine/v3.5/community" >> /etc/apk/repositories; \
+    echo "http://dl-5.alpinelinux.org/alpine/v3.5/community" >> /etc/apk/repositories;
 
 
     #####
     # Installing Alpine packages
     #####
-    apk add --no-cache \
+RUN apk add --no-cache \
         bash \
         ca-certificates \
         freetype-dev \
@@ -34,13 +34,13 @@ RUN echo "http://dl-2.alpinelinux.org/alpine/v3.5/community" >> /etc/apk/reposit
         python3 \
         python3-dev \
         yaml \
-    ; \
+    ;
 
 
     #####
     # Installing Python packages
     #####
-    python3 -m ensurepip; \
+RUN python3 -m ensurepip; \
     rm -r /usr/lib/python*/ensurepip; \
     pip3 install --no-cache-dir --upgrade \
         pip \
